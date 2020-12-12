@@ -2,7 +2,7 @@
 *
 *  Author:   Richard A. Forth
 *  Date:     2020-12-12
-*  Does:     count to 10 using do while looop
+*  Does:     count to 10 using do while loop
 *  Compiler: CodeBlocks
 *  OS:       Windows 10
 *

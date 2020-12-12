@@ -56,7 +56,7 @@
     if (sab<sbc)  // 1 < 1  false
         s=sab;
     else
-        s=sbc;  // if sab and sbc is equal this is executed. owset of  4 1 2 is still 1
+        s=sbc;  // if sab and sbc is equal this is executed. lowest of  4 1 2 is still 1
 
     printf("The smallest value is %d",s);
 

@@ -1,7 +1,7 @@
 /*  pointer_basics.c
 *
 *  Author:   Richard A. Forth
-*  Date:     2020-12-12
+*  Date:     2020-12-15
 *  Does:     Example of using pointers with a simple example in C
 *  Compiler: CodeBlocks
 *  OS:       Windows 10

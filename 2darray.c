@@ -1,7 +1,7 @@
 /*  2darray.c
 *
 *  Author:   Richard A. Forth
-*  Date:     2020-12-12
+*  Date:     2020-12-15
 *  Does:     Example of a 2 dimensional array in C
 *  Compiler: CodeBlocks
 *  OS:       Windows 10

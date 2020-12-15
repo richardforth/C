@@ -1,7 +1,7 @@
 /*  pointer_to_pointer.c
 *
 *  Author:   Richard A. Forth
-*  Date:     2020-12-12
+*  Date:     2020-12-15
 *  Does:     Example of using pointers to point to other pointers in C
 *  Compiler: CodeBlocks
 *  OS:       Windows 10

@@ -23,9 +23,9 @@ char * getname()
     // This code works
     //char *name = "Richard";
 
-    // This code I am having issues with
+    // This code I am having issues with --- fixed!
     char *ptr;
-    char n[11];
+    static char n[11];
     printf("Enter firstname: ");
     scanf("%s", &n);
     ptr = n;

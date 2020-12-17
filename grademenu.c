@@ -3,7 +3,7 @@
 *
 *  Author:   Richard A. Forth
 *  Date:     2020-12-12
-*  Does:     Tells a student if they quialify for a subject based on their grade and choice || uses case statement
+*  Does:     Tells a student if they qualify for a subject based on their grade and choice || uses case statement
 *  Compiler: CodeBlocks
 *  OS:       Windows 10
 *

@@ -2,7 +2,7 @@
 *
 *  Author:   Richard A. Forth
 *  Date:     2020-12-17
-*  Does:     Beeps and throws a message || Beep is windows notification || \a esc sequence character
+*  Does:     Struct example, books || uses function, struct, strcpy
 *  Compiler: CodeBlocks
 *  OS:       Windows 10
 *  Notes:    Modified example taken from https://www.tutorialspoint.com/cprogramming/c_structures.htm

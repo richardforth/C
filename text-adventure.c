@@ -56,3 +56,18 @@
 *   9. Health points for Big Monster to be decided, probably 18, three gunshots kills BM. or 2 with critical hit.
 *  10. Hit points for BM to be decided, how much damage is dealt, with chance for miss only, probably 8, with critical hit chance (12)
 */
+
+// includes
+#include <stdio.h>
+
+/* The closest thing we have in C to an object
+*  (that I know of, as of this writing anyway)
+*  is a struct, only structs dont have methods
+*  or constructors etc, so this could get clunky.
+*/
+
+// List of Structs we need
+// One for each room
+// One for each of the 5 goblins
+// One for the Big Monster
+// One for each Chest in the game

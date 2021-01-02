@@ -21,6 +21,6 @@ void main()
     strupr(name2);
 
     printf("The original string name1=[%s]\n", name1);
-    printf("The uppoer case version name2=[%s]\n", name2);
+    printf("The upper case version name2=[%s]\n", name2);
 
 }

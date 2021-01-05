@@ -1,12 +1,10 @@
 /* C CODE TO REVERSE 5 DIGIT NUMBER ENTERED THROUGH KEYBOARD */
 //The Number should be less than 32767
 #include <stdio.h>
-#include <conio.h>
 
 void main()
 {
    int NUM, R = 0;
-   clrscr();
 
    printf("Enter a number to reverse\n");
    scanf("%d", &NUM);
@@ -20,5 +18,4 @@ void main()
 
    printf("After reversing the Number is = %d\n", R);
 
-   getch();
 }

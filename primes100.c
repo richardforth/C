@@ -13,6 +13,7 @@ void main()
      j = 2;
   while ( j < sqrt(i) )
      {
+         printf("i => %d, j => %d, sqrt(i) => %f.\n", i, j, sqrt(i));
          if ( i % j == 0 )
             break;
 
@@ -25,7 +26,7 @@ void main()
 
       if ( j > sqrt(i) )
 
-            printf("%d|", i);
+            printf("i => %d, j => %d, sqrt(i) => %f. %d is therefore a Prime Number.\n", i, j, sqrt(i), i);
 
       ++i;
   }

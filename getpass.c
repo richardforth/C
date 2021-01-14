@@ -1,6 +1,6 @@
 /*  getpass.c */
 /// retrieve data from a file in binary
-/// use setpass.c to set the data first
+/// use getpass.c to retreive the data again
 
 
 /*** note that the data is not encrypted - its just stored in binary data format ***/
@@ -8,7 +8,8 @@
 /***************** so treat them as you would plain text files *********************/
 
 
-#include<stdio.h>
+#include <stdio.h>
+#include <conio.h> // getch()
 
 
 void main()
@@ -21,4 +22,6 @@ void main()
     fclose(fp);
     printf("Password retreieved successfully, and was '%s'.", rp);
 
+    getch();
 }
+

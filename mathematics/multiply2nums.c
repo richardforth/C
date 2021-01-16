@@ -14,7 +14,13 @@ void main()
     scanf("%d", &b);
 
     sum = a * b;
-    printf("Result: %d", sum);
+    printf("Result: %d\n\n", sum);
 
+    printf("Rules for mutiplying signed numbers:\n\n");
+    printf(" * + -\n");
+    printf(" + + -\n");
+    printf(" - - +\n\n");
+    printf(" *      same sign leads to a positive result\n");
+    printf(" * different sign leads to a negative result\n");
 
 }

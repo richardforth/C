@@ -29,7 +29,7 @@ void main()
     printf("(-2)(-3) = 6       // two minuses cancel out to leave     (+2)(+3) == 2 x  3 = 6\n");
     printf("(-2)(-3)(-4) = -24 // two minuses cancel out to leave (+2)(+3)(-4) == 6 x -4 = -24\n");
     printf("(-2)(-3)(-4)(-5) = // each two minuses cancel out so they are all positives, to leave:\n");
-    printf("                                                      (2)(3)(4)(5) = 98\n\n");
+    printf("                                                      (2)(3)(4)(5) = 120\n\n");
     printf(" Test this theory using 'multiply4nums.c'.\n\n");
 
 }

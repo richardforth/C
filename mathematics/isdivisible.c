@@ -18,7 +18,8 @@ void main()
 
     sum = a / b;
 
-    // if the floor of its value is the same as the principal, we have a whole number:
+    // if the floor of the sum is the same as the sum, we have a whole number:
+    // eg floor(5) = 5  = True or floor (1.2) = 1 = False
     if (floor(sum) == sum)
     {
         printf("True\n");

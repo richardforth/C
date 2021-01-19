@@ -11,7 +11,7 @@ int main()
   
   if (n < 2)
   {
-    printf("Number entered must be greater than 1");
+    printf("Number entered must be greater than 1.\n");
     exit(1);
   }
   

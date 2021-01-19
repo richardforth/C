@@ -7,7 +7,7 @@ int main()
 {
   int i, n;
   printf("Enter a number greater than 1: ");
-  scanf("%d", n);
+  scanf("%d", &n);
   
   if (n < 2)
   {
@@ -15,7 +15,7 @@ int main()
     exit(1);
   }
   
-  printf("Number-bindings to %d:", n);
+  printf("Number-bindings to %d:\n", n);
   for (i = 1; i<= n/2; i++)
   {
     printf("%d + %d = %d\n", i, n - i, n);

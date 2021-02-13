@@ -33,4 +33,3 @@ main ( )
       printf("%s\n", sayings[index]);
    }
 }
-$

@@ -4,7 +4,7 @@
 
 // attribution: https://cmd.inp.nsk.su/old/cmd2/manuals/unix/UNIX_Unleashed/ch08.htm
 
-// Usage: ./rf_tabulate | tbl | nroff | grep -v "^$"
+// Usage: ./rf_mktable_3col 3col_tab_data | tbl | nroff | grep -v "^$"
 
 int main ( int argc, char *argv[] )
 {

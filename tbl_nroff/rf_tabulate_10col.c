@@ -4,7 +4,7 @@
 
 // attribution: https://cmd.inp.nsk.su/old/cmd2/manuals/unix/UNIX_Unleashed/ch08.htm
 
-// Usage: ./rf_tabulate | tbl | nroff | grep -v "^$"
+// Usage:  sar -q > sarq && sar -W > sarW && pr -m -s" " sarq sarW > merge1 && sed -i 's/-/\\-/g' merge1 && sed -i 's/\s\+/\t/g' merge1 && grep ^[0-9] merge1 > merge2 && grep -v Page merge2 > merge3 && rfmktable_10col merge3 | tbl | nroff
 
 int main ( int argc, char *argv[] )
 {

@@ -4,7 +4,7 @@
 
 // attribution: https://cmd.inp.nsk.su/old/cmd2/manuals/unix/UNIX_Unleashed/ch08.htm
 
-// Usage: sar -q > sarq && sar -W > sarW && pr -m -s" " sarq sarW > merge1 && sed -i 's/-/\\-/g' merge1 && sed -i 's/\s\+/\t/g' merge1 && grep ^[0-9] merge1 > merge2 && grep -v Page merge2 > merge3 && awk -F"\t" '{ print $1, "\t", $2, "\t", $3, "\t", $4, "\t", $5, "\t", $6, "\t", $7, "\t", $9 "\t" $10}' merge3 > merge4 && rfmktable_9col merge4 | tbl | nroff
+// Usage: sar -q > sarq && sar -W > sarW && pr -m -s" " sarq sarW > merge1 && sed -i 's/-/\\-/g' merge1 && sed -i 's/\s\+/\t/g' merge1 && grep ^[0-9] merge1 > merge2 && grep -v Page merge2 > merge3 && awk -F"\t" '{ print $1, "\t", $2, "\t", $3, "\t", $4, "\t", $5, "\t", $6, "\t", $7, "\t", $9 "\t" $10}' merge3 > merge4 && rfmktable_9col merge4 | tbl | nroff | grep -v "^$"
 
 int main ( int argc, char *argv[] )
 {

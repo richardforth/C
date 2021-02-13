@@ -8,7 +8,7 @@
 // # for i in {1..10}; do echo -ne "$i\t" >> 10nums; done
 // # echo "" >> 10nums
 // # for i in {2..10}; do echo "$i" >> 10nums; done
-// # rfmktable_multicol 10nums 10 | tbl | nroff
+// # rfmktable_multicol 10nums 10 | tbl | nroff | grep -v "^$"
 
 
 int main ( int argc, char *argv[] )

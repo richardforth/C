@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-# attribution: https://cmd.inp.nsk.su/old/cmd2/manuals/unix/UNIX_Unleashed/ch08.htm
+// attribution: https://cmd.inp.nsk.su/old/cmd2/manuals/unix/UNIX_Unleashed/ch08.htm
 
 main ( )
 {

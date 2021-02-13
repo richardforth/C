@@ -20,14 +20,14 @@ main ( )
    // eventually we will pull in a file so this program
    // is more useful to us. Demo Data for now:
    printf("Computer Programming Languages\n");
-   printf("Language     Authors Runs on\n");
+   printf("Language\tAuthors\tRuns on\n");
    printf("\n");
-   printf("Fortran      Many    Almost anything\n");
-   printf("PL/1 IBM     360/370\n");
-   printf("C    BTL     11/45,H6000,370\n");
-   printf("BLISS        Carnegie\\-Mellon       PDP\\-10,11\n");
-   printf("IDS  Honeywell       H6000\n");
-   printf("Pascal       Stanford        370\n");
+   printf("Fortran\tMany\tAlmost anything\n");
+   printf("PL/1\tIBM\t360/370\n");
+   printf("C\tBTL\t11/45,H6000,370\n");
+   printf("BLISS\tCarnegie\\-Mellon\tPDP\\-10,11\n");
+   printf("IDS\tHoneywell\tH6000\n");
+   printf("Pascal\tStanford\t370\n");
    // end raw data printing
    printf(".TE");
 }

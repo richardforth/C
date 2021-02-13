@@ -1,11 +1,12 @@
 /* file_read.c
-*
-*  Create a C program the write a new file or overwrites and existing file of the same name
-*
-*/
+ * *
+ * *  Create a C program the write a new file or overwrites and existing file of the same name
+ * *
+ * */
 
 
 #include <stdio.h>
+#include <stdlib.h>
 
 
 void main()
@@ -13,7 +14,7 @@ void main()
     FILE *fp;
     char ch;
 
-    fp = fopen("H:\\Programming\\C\\file_new.txt", "r");
+    fp = fopen("tab_data.txt", "r");
 
     /* test for successful file open operation*/
     if (fp == 0)
@@ -23,13 +24,11 @@ void main()
     }
 
     /* retreive our message */
-    while(ch!=EOF)
+    while  ( (ch = fgetc(fp)) != EOF)
     {
-        ch=fgetc(fp);
         printf("%c",ch);
     }
 
     /* always close files you've opened */
     fclose(fp);
 
-}

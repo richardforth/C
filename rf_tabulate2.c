@@ -45,7 +45,7 @@ int main ( int argc, char *argv[] )
    /* always close files you've opened */
    fclose(fp);
    // end raw data printing
-   printf("\n.TE");
+   printf(".TE");
 
    return 0;
 }

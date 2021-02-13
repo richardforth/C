@@ -37,8 +37,10 @@ int main ( int argc, char *argv[] )
    printf(".in 1i\n");
    printf(".TS \n");
    printf("allbox;\n");
-   printf("c c c c c c c\n");
-   printf("l l l l l l l .\n");
+   printf("c s s s s s \n");
+   printf("cB cB cB cB cB cB \n");
+   printf("l l l l l l .\n");
+   printf("DISK SPACE REPORT\n");
    // do something to print tab or space delimited data
    while  ( (ch = fgetc(fp)) != EOF)
     {

@@ -32,10 +32,9 @@ int main ( int argc, char *argv[] )
    fp = fopen(fname, "r");
 
    printf("\\\" This file produced by a program!\n");
+   printf(".ll 15i \n");
    printf(".TS \n");
    printf("allbox;\n");
-   printf("c s s\n");
-   printf("cB cB cB\n");
    printf("l l l.\n");
    // do something to print tab or space delimited data
    while  ( (ch = fgetc(fp)) != EOF)

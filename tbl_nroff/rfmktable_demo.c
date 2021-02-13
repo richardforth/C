@@ -3,7 +3,7 @@
 
 // attribution: https://cmd.inp.nsk.su/old/cmd2/manuals/unix/UNIX_Unleashed/ch08.htm
 
-// Usage: ./rf_tabulate | tbl | nroff | grep -v "^$"
+// Usage: ./rfmktable-demo | tbl | nroff | grep -v "^$"
 
 main ( )
 {

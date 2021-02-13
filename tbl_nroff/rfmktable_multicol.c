@@ -4,6 +4,13 @@
 
 // attribution: https://cmd.inp.nsk.su/old/cmd2/manuals/unix/UNIX_Unleashed/ch08.htm
 
+// cool demo to try out:
+// # for i in {1..10}; do echo -ne "$i\t" >> 10nums; done
+// # echo "" >> 10nums
+// # for i in {2..10}; do echo "$i" >> 10nums; done
+// # rfmktable_multicol 10nums 10 | tbl | nroff
+
+
 int main ( int argc, char *argv[] )
 {
    int index;

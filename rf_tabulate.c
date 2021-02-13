@@ -4,6 +4,28 @@ $ cat rf_tabulate.c
 
 // attribution: https://cmd.inp.nsk.su/old/cmd2/manuals/unix/UNIX_Unleashed/ch08.htm
 
+// Usage: ./rf_tabulate | tbl | nroff | grep -v "^$"
+
+/* Produces the following table 
+┌─────────┬─────────────────┬─────────────────┐
+│Language │     Authors     │     Runs on     │
+├─────────┼─────────────────┼─────────────────┤
+│         │                 │                 │
+├─────────┼─────────────────┼─────────────────┤
+│Fortran  │ Many            │ Almost anything │
+├─────────┼─────────────────┼─────────────────┤
+│PL/1     │ IBM             │ 360/370         │
+├─────────┼─────────────────┼─────────────────┤
+│C        │ BTL             │ 11/45,H6000,370 │
+├─────────┼─────────────────┼─────────────────┤
+│BLISS    │ Carnegie−Mellon │ PDP−10,11       │
+├─────────┼─────────────────┼─────────────────┤
+│IDS      │ Honeywell       │ H6000           │
+├─────────┼─────────────────┼─────────────────┤
+│Pascal   │ Stanford        │ 370             │
+└─────────┴─────────────────┴─────────────────┘
+*/
+
 main ( )
 {
    int index;

@@ -5,10 +5,10 @@
 // attribution: https://cmd.inp.nsk.su/old/cmd2/manuals/unix/UNIX_Unleashed/ch08.htm
 
 // cool demo to try out:
-// # for i in {1..10}; do echo -ne "\t" >> 10nums; done
+// # for i in {1..10}; do echo -ne "$i\t" >> 10nums; done
 // # echo "" >> 10nums
-// # for i in {2..10}; do echo "" >> 10nums; done
-// # rfmktable_multicol 10nums 10 | tbl | nroff | grep -v "^$"
+// # for i in {2..10}; do echo "$i" >> 10nums; done
+// # rfmktable_multitled 10nums 10 | tbl | nroff | grep -v "^$"
 
 
 int main ( int argc, char *argv[] )

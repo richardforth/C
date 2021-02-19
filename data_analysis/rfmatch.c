@@ -59,11 +59,11 @@ int main( int argc, char *argv[] )
         token1[strcspn(token1, "\n")] = 0; // strip the newline on the second variable
         // compare and print results
         if (strcmp(token1, token0) == 0) {
-                printf("%s\t%s\tMATCH\n", token0, token1);
+                printf("%-20s\t%-20s\tMATCH\n", token0, token1);
         }
         else
         {
-                printf("%s\t%s\tMISMATCH\n", token0, token1);
+                printf("%-20s\t%-20s\tMISMATCH\n", token0, token1);
         }
    }
 

@@ -34,6 +34,7 @@ int main ( int argc, char *argv[] )
 
    printf("\\\" This file produced by a program!\n");
    printf(".ll 11i\n");
+   printf(".pl 200 \n"); 
    printf(".in 1i\n");
    printf(".TS \n");
    printf("allbox;\n");

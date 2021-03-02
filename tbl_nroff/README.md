@@ -4,6 +4,6 @@ Ive ceased work on these ascii tables because i found an even better web impleme
 
 https://ozh.github.io/ascii-tables/
 
-All I will say is that if you have sensitive data you cant always trust what you put into a third party webform.
+All I will say is that if you have sensitive data you cant always trust what you put into a third party webform. Ie you just don't know if they are harvesting the data.
 
 in that case some of these c implementations my be better for you.

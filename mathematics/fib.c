@@ -9,12 +9,14 @@
  void fibber(int t)
  {
      int n = 1;
-     int pn = 0;
+     int pn = 1;
      int sum = 1;
+
+     // the first two number of the sequence are always one
+     printf("  '%d',\n", pn);
 
      while (sum <= t )
      {
-
         printf("  '%d',\n", sum);
         pn = n;
         n = sum;

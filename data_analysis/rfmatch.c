@@ -3,6 +3,12 @@
 #include <unistd.h>
 #include <string.h>
 
+// Adding colour output so its easy to spot mismatches on the eye
+#define RED   "\x1B[31m"
+#define CYN   "\x1B[36m"
+#define RESET "\x1B[0m"
+
+
 // premise: take a file of tab delimited data
 //  of exactly 2 columns and check for
 //  match or mismatch and report findings to the screen
@@ -59,11 +65,11 @@ int main( int argc, char *argv[] )
         token1[strcspn(token1, "\n")] = 0; // strip the newline on the second variable
         // compare and print results
         if (strcmp(token1, token0) == 0) {
-                printf("%-20s\t%-20s\tMATCH\n", token0, token1);
+                printf(CYN "%-20s\t%-20s\tMATCH\n" RESET, token0, token1);
         }
         else
         {
-                printf("%-20s\t%-20s\tMISMATCH\n", token0, token1);
+                printf(RED "%-20s\t%-20s\tMISMATCH\n" RESET, token0, token1);
         }
    }
 

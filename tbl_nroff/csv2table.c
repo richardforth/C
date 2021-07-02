@@ -53,8 +53,8 @@ int main ( int argc, char *argv[] )
    else
    {
         printf("\nError: Wrong number of arguments supplied!\n");
-        printf("Usage: ./rfmktable_multicol <filename> <No of Cols> | tbl | nroff\n");
-        printf("Example: ./rfmktable_multicol tab_data 6  | tbl | nroff\n");
+        printf("Usage: ./csv2table <filename> <No of Cols>\n");
+        printf("Example: ./csv2table data.csv 6\n");
         return 1;
    }
    fp = fopen(fname, "r");

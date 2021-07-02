@@ -18,7 +18,7 @@ Data1,Data2,Data3,Data4,Data5
 $
 $
 $
-$ ./csv2table mydata.csv 5
+$ ./csv2table mydata.csv
 +--------------------------------------+
 |   Example CSV Data for conversion    |
 +------+-------+-------+-------+-------+
@@ -31,6 +31,40 @@ $
 */
 
 
+int getCols(FILE *fp);
+
+
+
+
+int getCols(FILE *fp)
+{
+
+  int n = 0, count = 0;
+  char ch;
+  /* count columns in each row and maintain highscore */
+  while  ( (ch = fgetc(fp)) != EOF)
+  {
+    if (ch == ',')
+    {
+      count++;
+    }
+    else if (ch == '\n')
+    {
+      // check if this is the most commas we found so far
+      if (count > n)
+      {
+        // make ncols the new larger count
+        n = count;
+      }
+      // reset count to 0;
+      count = 0;
+    }
+  }
+  rewind(fp);
+  return n + 1;
+}
+
+
 int main ( int argc, char *argv[] )
 {
    int index;
@@ -40,10 +74,9 @@ int main ( int argc, char *argv[] )
    int ncols, i;
 
    // get file name argument
-   if (argc == 3 )
+   if (argc == 2 )
    {
         fname = argv[1];
-        ncols = atoi(argv[2]);
         if( ! access( fname, R_OK ) == 0 ) {
                 // file doesn't exist
                 printf("\nError: File won't open or doesnt exist: %s\n", fname);
@@ -53,13 +86,16 @@ int main ( int argc, char *argv[] )
    else
    {
         printf("\nError: Wrong number of arguments supplied!\n");
-        printf("Usage: ./csv2table <filename> <No of Cols>\n");
-        printf("Example: ./csv2table data.csv 6\n");
+        printf("Usage: ./csv2table <filename>\n");
+        printf("Example: ./csv2table data.csv\n");
         return 1;
    }
    fp = fopen(fname, "r");
-   tmpfp = fopen("temp.dat", "w");
 
+   ncols = getCols(fp);
+
+
+   tmpfp = fopen("temp.dat", "w");
    fprintf(tmpfp, "\\\" This file produced by a program!\n");
    fprintf(tmpfp, ".ll 15i \n");
    fprintf(tmpfp, ".pl 200 \n");
@@ -111,7 +147,7 @@ int main ( int argc, char *argv[] )
 
    /* always close files you've opened */
    fclose(fp);
-   
+
    /* delete the temporary file */
    remove("temp.dat");
    return 0;

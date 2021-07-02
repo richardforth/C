@@ -41,7 +41,7 @@ int main( int argc, char *argv[] ) {
 
   fp = fopen(fname, "r");
 
-  /* test by converting the file to tabbed data */
+  /* count columns in each row and maintain highscore */
   while  ( (ch = fgetc(fp)) != EOF)
   {
     if (ch == ',')

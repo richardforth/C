@@ -19,6 +19,7 @@ $
 $
 $
 $ ./csv2table mydata.csv
+Columns: 5
 +--------------------------------------+
 |   Example CSV Data for conversion    |
 +------+-------+-------+-------+-------+
@@ -28,19 +29,45 @@ $ ./csv2table mydata.csv
 +------+-------+-------+-------+-------+
 $
 
+DEMO 2
+
+$ cat mydata.csv | csv2table
+Columns: 5
++--------------------------------------+
+|   Example CSV Data for conversion    |
++------+-------+-------+-------+-------+
+|Col1  | Col2  | Col3  | Col4  | Col5  |
++------+-------+-------+-------+-------+
+|Data1 | Data2 | Data3 | Data4 | Data5 |
++------+-------+-------+-------+-------+
+
+DEMO 3
+
+$ echo -e "Example CSV Data for conversion\n1,2,3,4,5\n6,7,8,9,10" | csv2table
+Columns: 5
++--------------------------------+
+|Example CSV Data for conversion |
++-----+------+-----+------+------+
+|1    | 2    |3    | 4    |5     |
++-----+------+-----+------+------+
+|6    | 7    |8    | 9    |10    |
++-----+------+-----+------+------+
+
+
+
 */
 
 
+FILE *tfp;
 int getCols(FILE *fp);
-
-
-
 
 int getCols(FILE *fp)
 {
 
   int n = 0, count = 0;
-  char ch;
+  char ch, *tfname;
+  tfname = "tempdata.dat";
+  tfp = fopen(tfname, "w");
   /* count columns in each row and maintain highscore */
   while  ( (ch = fgetc(fp)) != EOF)
   {
@@ -59,7 +86,9 @@ int getCols(FILE *fp)
       // reset count to 0;
       count = 0;
     }
+    fprintf(tfp, "%c", ch);
   }
+  fclose(tfp);
   rewind(fp);
   return n + 1;
 }
@@ -73,27 +102,30 @@ int main ( int argc, char *argv[] )
    char *fname;
    int ncols, i;
 
-   // get file name argument
+   // first get file name argument
    if (argc == 2 )
    {
-        fname = argv[1];
-        if( ! access( fname, R_OK ) == 0 ) {
-                // file doesn't exist
-                printf("\nError: File won't open or doesnt exist: %s\n", fname);
-                return 1;
-        }
+     fname = argv[1];
+     if( ! access( fname, R_OK ) == 0 ) {
+       // file doesn't exist
+       printf("\nError: File won't open or doesnt exist: %s\n", fname);
+       return 1;
+     }
+     fp = fopen(fname, "r");
+     ncols = getCols(fp);
+     printf("Columns: %d\n", ncols);
+     fclose(fp);
    }
    else
    {
-        printf("\nError: Wrong number of arguments supplied!\n");
-        printf("Usage: ./csv2table <filename>\n");
-        printf("Example: ./csv2table data.csv\n");
-        return 1;
+     fp = stdin;
+     ncols = getCols(fp);
+     printf("Columns: %d\n", ncols);
+     fclose(fp);
    }
+   // update fp pointer to new tempdata.dat file
+   fname = "tempdata.dat";
    fp = fopen(fname, "r");
-
-   ncols = getCols(fp);
-
 
    tmpfp = fopen("temp.dat", "w");
    fprintf(tmpfp, "\\\" This file produced by a program!\n");
@@ -112,8 +144,8 @@ int main ( int argc, char *argv[] )
         fprintf(tmpfp, "l ");
    }
    fprintf(tmpfp, ".\n");
-   // convert csv data to tabbed data
-   // write to a new temporary file
+
+
    while  ( (ch = fgetc(fp)) != EOF)
     {
         if (ch == ',')
@@ -150,5 +182,6 @@ int main ( int argc, char *argv[] )
 
    /* delete the temporary file */
    remove("temp.dat");
+   remove("tempdata.dat");
    return 0;
 }

@@ -111,6 +111,8 @@ int main ( int argc, char *argv[] )
 
    /* always close files you've opened */
    fclose(fp);
-
+   
+   /* delete the temporary file */
+   remove("temp.dat");
    return 0;
 }

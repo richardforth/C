@@ -3,10 +3,13 @@
 *  Author:   Richard A. Forth
 *  Date:     2021-07-02
 *  Does:     converts csv data to ascii tables
+*  Requires: 
+*              - tbl
+*              - nroff
 *  Temp Tiles:
-              - temp.dat // the tble format file used by the 'tbl'  command before passing to 'nroff -Tascii'
-              - tempdata.dat // a copy of stdin used for processing as stdin is not seekable
-              - these files are destroyed after the table is generated.
+*              - temp.dat // the tble format file used by the 'tbl'  command before passing to 'nroff -Tascii'
+*              - tempdata.dat // a copy of stdin used for processing as stdin is not seekable
+*              - these files are destroyed after the table is generated.
 *  Compiler: gcc
 *  OS:       Ubuntu 18.04 under Windows Subsystem for Linux (WSL)
 *

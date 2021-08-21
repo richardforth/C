@@ -45,6 +45,8 @@ int main() {
 
     printf("Enter program name [new.c]: ");
     fgets(auth_progname, sizeof auth_progname, stdin);
+    auth_progname[strcspn(auth_progname, "\n")] = 0;
+
 
     if (strlen(auth_progname) == 1) {
         strcpy(auth_progname, "new.c");
@@ -52,6 +54,7 @@ int main() {
 
     printf("\nEnter a breif description of the program [A new program.]: ");
     fgets(auth_prog_descr, sizeof auth_prog_descr, stdin);
+    auth_prog_descr[strcspn(auth_prog_descr, "\n")] = 0;
 
     if (strlen(auth_prog_descr) == 1) {
             strcpy(auth_prog_descr, "A new program.");
@@ -59,6 +62,7 @@ int main() {
 
     printf("\nEnter Author name [Richard A. Forth]: ");
     fgets(auth_name, sizeof auth_name, stdin);
+    auth_name[strcspn(auth_name, "\n")] = 0;
 
     if (strlen(auth_name) == 1) {
             strcpy(auth_name, "Richard A. Forth");

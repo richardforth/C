@@ -45,27 +45,33 @@ int main() {
 
     printf("Enter program name [new.c]: ");
     fgets(auth_progname, sizeof auth_progname, stdin);
-    auth_progname[strcspn(auth_progname, "\n")] = 0;
 
 
     if (strlen(auth_progname) == 1) {
         strcpy(auth_progname, "new.c");
+    } else {
+        auth_progname[strcspn(auth_progname, "\n")] = 0;
     }
 
     printf("\nEnter a breif description of the program [A new program.]: ");
     fgets(auth_prog_descr, sizeof auth_prog_descr, stdin);
-    auth_prog_descr[strcspn(auth_prog_descr, "\n")] = 0;
 
     if (strlen(auth_prog_descr) == 1) {
             strcpy(auth_prog_descr, "A new program.");
+    } else {
+        auth_prog_descr[strcspn(auth_prog_descr, "\n")] = 0;
     }
+
+
+
 
     printf("\nEnter Author name [Richard A. Forth]: ");
     fgets(auth_name, sizeof auth_name, stdin);
-    auth_name[strcspn(auth_name, "\n")] = 0;
 
     if (strlen(auth_name) == 1) {
             strcpy(auth_name, "Richard A. Forth");
+    } else {
+        auth_name[strcspn(auth_name, "\n")] = 0;
     }
 
     printf("/* %s\n *\n"
@@ -74,7 +80,7 @@ int main() {
            " *  Description: %s\n"
            " *  License:     MIT (see below)\n"
            "\n\n"
-           " Copyright 2021 %s\n\n"
+           " Copyright %d %s\n\n"
            " Permission is hereby granted, free of charge, to any person\n"
            " obtaining a copy of this software and associated documentation\n"
            " files (the \"Software\"), to deal in the Software without\n"
@@ -93,11 +99,19 @@ int main() {
            " SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n"
            " */"
            "\n\n"
-           "int main () {\n"
+           "#include <stdio.h>\n"
+           "#include <string.h>\n"
+           "#include <time.h>\n"
            "\n\n"
+           "int main () {\n"
+           "\n"
+           "  time_t t = time(NULL);\n"
+           "  struct tm tm = *localtime(&t);\n"
+           "\n\n"
+           "  printf(\"Today's date: %%d.%%02d.%%02d\\n\", tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);\n\n"
            "  return 0;\n"
            "}\n"
-           , auth_progname, auth_name, tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, auth_prog_descr, auth_name);
+           , auth_progname, auth_name, tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, auth_prog_descr, tm.tm_year + 1900, auth_name);
 
     return 0;
 }

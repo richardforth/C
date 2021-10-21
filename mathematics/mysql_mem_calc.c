@@ -109,9 +109,9 @@ int main()
         totalGbytes = roundf(totalMbytes / 1024);
 
         // Print results
-        printf("\nTotal (kbytes): %f", totalkbytes);
-        printf("\nTotal (Mbytes): %f", totalMbytes);
-        printf("\nTotal (Gbytes): %f", totalGbytes);
+        printf("\nTotal (kbytes): %.2f", totalkbytes);
+        printf("\nTotal (Mbytes): %.2f", totalMbytes);
+        printf("\nTotal (Gbytes): %.2f", totalGbytes);
         printf("\n\nDone!\n");
 
         // End Program

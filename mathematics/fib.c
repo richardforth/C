@@ -5,6 +5,7 @@
  */
 
  #include <string.h>
+ #include <stdio.h>
 
  void fibber(int t)
  {

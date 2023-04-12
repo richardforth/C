@@ -66,14 +66,16 @@ int main()
         scanf("%d", &innodblogbuffersize);
         subtotal1 += innodblogbuffersize;
 
-        printf("max_connections: ");
-        scanf("%d", &maxconnections);
-        subtotal1 += maxconnections;
+
 
         printf("\n\nSubtotal1 (bytes): %d\n\n", subtotal1);
 
 
         // subtotal2 section
+        
+        printf("max_connections: ");
+        scanf("%d", &maxconnections);
+      
         printf("sort_buffer_size: ");
         scanf("%d", &sortbuffersize);
         subtotal2 += sortbuffersize;
@@ -98,9 +100,10 @@ int main()
         scanf("%d", &binlogcachesize);
         subtotal2 += binlogcachesize;
 
+        subtotal1 *= maxconnections;
         printf("\n\nSubtotal2 (bytes): %d\n\n", subtotal2);
 
-        totalbytes = subtotal1 * subtotal2;
+        totalbytes = subtotal1 + subtotal2;
         printf("\n\nTotal (bytes): %d\n\n", totalbytes);
 
         // Do some floating point calculations

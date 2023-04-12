@@ -17,7 +17,6 @@ int main()
         // main variables for totals
         int subtotal1 = 0;
         int subtotal2 = 0;
-        int totalbytes = 0;
         float totalkbytes = 0;
         float totalMbytes = 0;
         float totalGbytes = 0;
@@ -103,13 +102,11 @@ int main()
         subtotal2 *= maxconnections;
         printf("\n\nSubtotal2 (bytes): %d\n\n", subtotal2);
 
-        totalbytes = subtotal1 + subtotal2;
-        printf("\n\nTotal (bytes): %d\n\n", totalbytes);
-
+        totalkbytes = subtotal1 + subtotal2;
+        
         // Do some floating point calculations
-        totalkbytes = roundf(totalbytes / 1024);
-        totalMbytes = roundf(totalkbytes / 1024);
-        totalGbytes = roundf(totalMbytes / 1024);
+        totalMbytes = totalkbytes / 1024;
+        totalGbytes = totalMbytes / 1024;
 
         // Print results
         printf("\nTotal (kbytes): %.2f", totalkbytes);

@@ -100,7 +100,7 @@ int main()
         scanf("%d", &binlogcachesize);
         subtotal2 += binlogcachesize;
 
-        subtotal1 *= maxconnections;
+        subtotal2 *= maxconnections;
         printf("\n\nSubtotal2 (bytes): %d\n\n", subtotal2);
 
         totalbytes = subtotal1 + subtotal2;

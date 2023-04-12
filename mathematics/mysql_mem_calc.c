@@ -1,7 +1,7 @@
 /* mysql_mem_calc.c
  * *
  * *  Author: Richard A. Forth
- * *  Does:   Prompts for values and calculates approximate myswl memoy usage
+ * *  Does:   Prompts for values and calculates approximate mysql memory usage
  * *  Date:   21-10-2021
  * *  Comments:
  * *     Based on inspiration taken from https://www.mysqlcalculator.com/

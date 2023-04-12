@@ -55,7 +55,7 @@ int main()
         subtotal1 += tmptablesize;
 
         printf("innodb_buffer_pool_size: ");
-        scanf("%d", &innodbbufferpoolsize);
+        scanf("%ld", &innodbbufferpoolsize);
         subtotal1 += innodbbufferpoolsize;
 
         printf("innodb_additional_mem_pool_size: ");
@@ -68,7 +68,7 @@ int main()
 
 
 
-        printf("\n\nSubtotal1 (bytes): %d\n\n", subtotal1);
+        printf("\n\nSubtotal1 (bytes): %ld\n\n", subtotal1);
 
 
         // subtotal2 section
@@ -101,7 +101,7 @@ int main()
         subtotal2 += binlogcachesize;
 
         subtotal2 *= maxconnections;
-        printf("\n\nSubtotal2 (bytes): %d\n\n", subtotal2);
+        printf("\n\nSubtotal2 (bytes): %ld\n\n", subtotal2);
 
         totalbytes = subtotal1 + subtotal2;
         
@@ -111,9 +111,9 @@ int main()
         totalGbytes = totalMbytes / 1024;
 
         // Print results
-        printf("\nTotal (kbytes): %.2f", totalkbytes);
-        printf("\nTotal (Mbytes): %.2f", totalMbytes);
-        printf("\nTotal (Gbytes): %.2f", totalGbytes);
+        printf("\nTotal (kbytes): %.2Lf", totalkbytes);
+        printf("\nTotal (Mbytes): %.2Lf", totalMbytes);
+        printf("\nTotal (Gbytes): %.2Lf", totalGbytes);
         printf("\n\nDone!\n");
 
         // End Program

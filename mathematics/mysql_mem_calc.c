@@ -17,10 +17,10 @@ int main()
         // main variables for totals
         long int subtotal1 = 0;
         long int subtotal2 = 0;
-        long float totalbytes = 0;
-        long float totalkbytes = 0;
-        long float totalMbytes = 0;
-        long float totalGbytes = 0;
+        long double totalbytes = 0;
+        long double totalkbytes = 0;
+        long double totalMbytes = 0;
+        long double totalGbytes = 0;
 
         // mysql variables - subtotals1
         int keybuffersize;

@@ -15,18 +15,18 @@ int main()
 {
 
         // main variables for totals
-        int subtotal1 = 0;
-        int subtotal2 = 0;
-        float totalbytes = 0;
-        float totalkbytes = 0;
-        float totalMbytes = 0;
-        float totalGbytes = 0;
+        long int subtotal1 = 0;
+        long int subtotal2 = 0;
+        long float totalbytes = 0;
+        long float totalkbytes = 0;
+        long float totalMbytes = 0;
+        long float totalGbytes = 0;
 
         // mysql variables - subtotals1
         int keybuffersize;
         int querycachesize;
         int tmptablesize;
-        int innodbbufferpoolsize;
+        long int innodbbufferpoolsize;
         int innodbadditionalmempoolsize;
         int innodblogbuffersize;
         int maxconnections;
